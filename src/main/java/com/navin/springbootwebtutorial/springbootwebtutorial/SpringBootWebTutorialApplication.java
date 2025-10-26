@@ -13,6 +13,9 @@ public class SpringBootWebTutorialApplication implements CommandLineRunner {
     @Autowired
     Apple apple1;
 
+    @Autowired
+    private DBService db;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootWebTutorialApplication.class, args);
 	}
@@ -20,5 +23,6 @@ public class SpringBootWebTutorialApplication implements CommandLineRunner {
     @Override
     public void run(String... args){
         apple1.eatApple();
+        db.getDB();
     }
 }
