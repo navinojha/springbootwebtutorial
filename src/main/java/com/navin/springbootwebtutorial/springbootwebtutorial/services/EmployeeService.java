@@ -15,15 +15,15 @@ public class EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public List<EmployeeEntity> findAllEmployees(){
+    public List<EmployeeEntity> findAllEmployees() {
         return employeeRepository.findAll();
     }
 
-    public EmployeeEntity findEmployeeById(Long Id){
+    public EmployeeEntity findEmployeeById(Long Id) {
         return employeeRepository.findById(Id).orElse(null);
     }
 
-    public EmployeeEntity createEmployee(EmployeeEntity employeeEntity){
+    public EmployeeEntity createEmployee(EmployeeEntity employeeEntity) {
         return employeeRepository.save(employeeEntity);
     }
 }
